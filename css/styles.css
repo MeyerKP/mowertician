@@ -1,0 +1,68 @@
+body {
+  background: #ffffff;
+  font-family: 'robotoregular', sans-serif;
+  font-size: 14pt;
+  color: #000000;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+.container {
+  margin-left: 300px;
+  margin-right: 300px;
+  display: flex;
+}
+.navbar {
+  height: 110px;
+  width: 100%;
+  position: sticky;
+  border-bottom: #000000 1px solid;
+  z-index: 1;
+}
+.leftnav {
+  display: flex;
+  align-items: center;
+}
+.rightnav {
+  height: 110px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex: 1;
+}
+#navmowertician {
+  height: auto;
+  width: auto;
+  display: flex;
+  position: relative;
+  font-family: 'seagram_tfbregular';
+}
+#navmowertician:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #ffffff;
+  opacity: 0;
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+}
+#navmowertician:hover:before {
+  opacity: .4;
+}
+#navmowertician p {
+  margin: 0px 0px;
+  font-size: 36pt;
+}
+#nav_mower {
+  color: #000000;
+}
+#nav_racing {
+  color: #0F96DC;
+}
