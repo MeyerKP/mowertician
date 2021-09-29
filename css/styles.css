@@ -80,15 +80,28 @@ ul {
 #navbar_list a:hover {
   color: #0F96DC
 }
-.navmenu {
+#navmenu {
+  display: block;
   font-size: 22pt;
   margin-left: 10%;
   transition: 0.3s linear;
 }
-.navmenu:hover {
+#navmenu:hover {
   color: #0F96DC;
 }
 #home_page_main_photo {
   height: auto;
   width: 100%;
+}
+#main_menu {
+  display: flex;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 6000px;
+  overflow: hidden;
+  z-index: 0.9;
 }
