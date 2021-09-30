@@ -8,10 +8,27 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+document.getElementById("navmenu").onclick = function() {
+  const element = document.querySelector('#main_menu');
+  const style = getComputedStyle(element);
+  const left = style.left;
+  if (left == "0px") {
+      closemainMenu();
+      console.log(left);
+  } else {
+      openmainMenu();
+      console.log(left);
+}}
 
-document.getElementById("navmenu").onclick = openmainMenu
-  function openmainMenu() {
-    document.getElementById("main_menu").style.right = '0px';
-    document.getElementById("main_menu").style.height = 'auto';
-    document.getElementById("main_menu").style.width = '100%';
-  }
+document.getElementById("main_menu_ex").onclick = closemainMenu
+    
+function openmainMenu() {
+  document.getElementById("main_menu").style.left = '0%';
+  document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+  document.getElementById("navbar").style.position = 'sticky';
+}
+function closemainMenu() {
+  document.getElementById("main_menu").style.left = '-100%';
+  document.getElementsByTagName('body')[0].style.overflow = 'scroll';
+  document.getElementById("navbar").style.position = 'fixed';
+}

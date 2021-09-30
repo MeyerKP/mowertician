@@ -4,6 +4,7 @@ body {
   font-size: 14pt;
   color: #000000;
   margin: 0;
+  overflow: scroll;
 }
 a {
   text-decoration: none;
@@ -11,6 +12,8 @@ a {
 }
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .container {
   margin-left: 16%;
@@ -84,6 +87,7 @@ ul {
   display: block;
   font-size: 22pt;
   margin-left: 10%;
+  cursor: pointer;
   transition: 0.3s linear;
 }
 #navmenu:hover {
@@ -95,13 +99,93 @@ ul {
 }
 #main_menu {
   display: flex;
+  background: #ffffff;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 91px;
+  left: -100%;
+  border-right: #000000 1px solid;
+  overflow: hidden;
+  transition: all 1.2s ease;
+}
+#main_menu_left {
+  width: 60%;
+}
+#main_menu_ex {
+  display: block;
+  height: 24px;
+  width: 24px;
+  color: #000000;
+  font-size: 24pt;
   position: absolute;
-  height: 1px;
-  width: 1px;
-  top: 0;
+  top: 20px;
+  right: 50px;
+  transition: color 0.3s linear;
+}
+#main_menu_ex:hover {
+  color: #0F96DC;
+}
+#main_menu_pic {
+  height: 100%;
+  width: 100%;
+}
+#main_menu_right {
+  display: flex;
+  flex-direction: column;
+  font-size: 22pt;
+  font-family: 'robotocondensed-bold', sans-serif;
+  font-weight: 600;
+  height: auto;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+}
+#main_menu_menu ul {
+  margin: 0;
+}
+#main_menu_menu li {
+  display: block;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+#main_menu_social {
+  padding-bottom: 140px;
+}
+#main_menu_social li {
+  display: inline;
+  font-size: 22pt;
+}
+#main_menu_social a {
+  transition: color 0.3s;
+}
+#main_menu_social a:hover {
+  color: #0F96DC;
+}
+#main_menu_menu a {
+  color: #000000;
+  position: relative;
+  transition: color 0.4s;
+}
+#main_menu_menu a:after {
+  content: "";
+  position: absolute;
   bottom: 0;
   left: 0;
-  right: 6000px;
-  overflow: hidden;
-  z-index: 0.9;
+  width: 0%;
+  border-bottom: #0F96DC 3px solid;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+}
+#main_menu_menu a:hover::after {
+  width: 100%;
+}
+#main_menu_menu a:hover {
+  color: #0F96DC;
+}
+#mm_racing {
+  display: inline;
+  color: #0F96DC;
+  font-family: 'seagram_tfbregular';
+  font-size: 26pt;
 }
