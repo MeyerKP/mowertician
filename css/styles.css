@@ -15,13 +15,16 @@ ul {
   margin: 0;
   padding: 0;
 }
+p {
+  margin: 0;
+}
 .container {
   margin-left: 16%;
   margin-right: 16%;
   display: flex;
 }
 #navbar {
-  height: 90px;
+  height: 80px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -35,7 +38,7 @@ ul {
   align-items: center;
 }
 #rightnav {
-  height: 90px;
+  height: 80px;
   width: auto;
   display: flex;
   align-items: center;
@@ -94,6 +97,7 @@ ul {
   color: #0F96DC;
 }
 #home_page_main_photo {
+  margin-top: 81px;
   height: auto;
   width: 100%;
 }
@@ -103,11 +107,12 @@ ul {
   position: fixed;
   height: 100%;
   width: 100%;
-  top: 91px;
+  top: 81px;
   left: -100%;
   border-right: #000000 1px solid;
   overflow: hidden;
   transition: all 1.2s ease;
+  z-index: 1;
 }
 #main_menu_left {
   width: 60%;
@@ -188,4 +193,53 @@ ul {
   color: #0F96DC;
   font-family: 'seagram_tfbregular';
   font-size: 26pt;
+}
+.partners_container {
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin-top: 5%;
+}
+.partners_container a {
+  margin-top: 1%;
+  margin-bottom: 0;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.partners_text {
+  display: flex;
+  flex-direction: row;
+  font-size: 36pt;
+  margin: 0;
+  height: 100%;
+  align-items: center;
+  padding-bottom: 1%;
+  border-bottom: solid 3px;
+  border-image: linear-gradient(to right, #ff6e00 30%, #ffffff 30%) 100% 1;
+}
+#partners_racing {
+  color: #0F96DC;
+  font-family: 'seagram_tfbregular';
+  font-size: 36pt;
+}
+.partner_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.partner_logos_mouseover {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+.partner_logos_mouseover:hover {
+  opacity: 1;
+}
+.loaded_logo {
+  position: absolute;
 }
