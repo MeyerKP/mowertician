@@ -139,7 +139,7 @@ p {
   display: flex;
   flex-direction: column;
   font-size: 22pt;
-  font-family: 'robotocondensed-bold', sans-serif;
+  font-family: 'robotobold', sans-serif;
   font-weight: 600;
   height: auto;
   width: 40%;
@@ -181,6 +181,8 @@ p {
   border-bottom: #0F96DC 3px solid;
   transition: 0.4s ease;
   -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
 }
 #main_menu_menu a:hover::after {
   width: 100%;
@@ -193,6 +195,140 @@ p {
   color: #0F96DC;
   font-family: 'seagram_tfbregular';
   font-size: 26pt;
+}
+.latest_news_container {
+  flex-direction: column;
+  height: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.latest_news {
+  font-family: 'roboto_condensedbold';
+  font-size: 36pt;
+  color: #000000;
+  padding-bottom: 1%;
+  margin-bottom: 2%;
+  border-bottom: solid 4px;
+  border-image: linear-gradient(to right, #ff7E00 30%, #ffffff 30%) 100% 1;
+}
+#l_news {
+  color: #0F96DC;
+}
+.fb_post_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+/*.fb_interactive {
+  display: block;
+  height: auto;
+  width: auto;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+.fb_interactive:hover {
+  background-color: #0F96DC;
+}*/
+.fb_interactive {
+  position: relative;
+  padding: 1%;
+  border: solid 5px transparent;
+}
+.fb_interactive:before, .fb_interactive:after {
+  content: "";
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+.fb_interactive:after {
+  bottom: 0;
+  right: 0;
+  width: 2%;
+  height: 2%;
+  border-bottom: 5px #0F96DC solid;
+  border-right: 5px #0F96DC solid;
+}
+.fb_interactive:before {
+  top: 0;
+  left: 0;
+  height: 2%;
+  width: 2%;
+  border-left: 5px #0F96DC solid;
+  border-top: 5px #0F96DC solid;
+}
+.fb_interactive:hover::after {
+  width: 45%;
+  height: 45%;
+}
+.fb_interactive:hover::before {
+  height: 45%;
+  width: 45%;
+}
+.next_race_bar {
+  display: flex;
+  height: 36vh;
+  width: 100vw;
+  background: rgb(0,41,80);
+  background: linear-gradient(100deg, rgba(0,41,80,1) 4%, rgba(0,67,130,1) 50%, rgba(15,150,220,1) 96%);
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border-top: #0F96DC solid 12px;
+  border-bottom: #0F96DC solid 12px;
+}
+.left_race_bar {
+  height: auto;
+  width: 25%;
+  font-size: 32pt;
+  color: #ffffff;
+  font-family: 'roboto_condensedbold';
+}
+#next_race_position {
+  margin-top: 10%;
+  margin-left: 10%;
+  padding-bottom: 1%;
+  border-bottom: solid 4px;
+  border-image: linear-gradient(to right, #ff7E00 30%, #ffffff 30%) 100% 1;
+}
+#next_race {
+  color: #0F96DC;
+}
+.center_race_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 50%;
+}
+.center_race_bar span {
+  font-family: 'robotoblack_italic';
+  font-size: 102pt;
+  color: #ffffff;
+}
+#center_race_month {
+  margin-left: 10%;
+  color: #0F96DC;
+}
+#center_race_day {
+  color: #ff7E00;
+}
+#center_race_year {
+  margin-right: 10%;
+  color: #ffffff;
+}
+.right_race_bar {
+  height: auto;
+  width: 25%;
+  opacity: .1;
+}
+.race_bar_pic {
+  height: 100%;
+  width: 100%;
 }
 .partners_container {
   flex-direction: column;
@@ -241,64 +377,4 @@ p {
 }
 .loaded_logo {
   position: absolute;
-}
-.next_race_bar {
-  display: flex;
-  height: 36vh;
-  width: 100vw;
-  background: rgb(0,41,80);
-  background: linear-gradient(100deg, rgba(0,41,80,1) 4%, rgba(0,67,130,1) 50%, rgba(15,150,220,1) 96%);
-  margin-top: 3%;
-  margin-bottom: 3%;
-  border-top: #0F96DC solid 12px;
-  border-bottom: #0F96DC solid 12px;
-}
-.left_race_bar {
-  height: auto;
-  width: 25%;
-  font-size: 32pt;
-  color: #ffffff;
-  font-family: 'roboto_condensedbold';
-}
-#next_race_position {
-  margin-top: 10%;
-  margin-left: 10%;
-  padding-bottom: 1%;
-  border-bottom: solid 4px;
-  border-image: linear-gradient(to right, #ff7E00 30%, #ffffff 30%) 100% 1;
-}
-#next_race {
-  color: #0F96DC;
-}
-.center_race_bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: auto;
-  width: 50%;
-}
-.center_race_bar span {
-  font-family: 'robotoblack_italic';
-  font-size: 96pt;
-  color: #ffffff;
-}
-#center_race_month {
-  margin-left: 10%;
-  color: #0F96DC;
-}
-#center_race_day {
-  color: #ff7E00;
-}
-#center_race_year {
-  margin-right: 10%;
-  color: #ffffff;
-}
-.right_race_bar {
-  height: auto;
-  width: 25%;
-  opacity: .1;
-}
-.race_bar_pic {
-  height: 100%;
-  width: 100%;
 }
