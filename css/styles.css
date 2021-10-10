@@ -4,7 +4,8 @@ body {
   font-size: 14pt;
   color: #000000;
   margin: 0;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -220,19 +221,6 @@ p {
   flex-wrap: wrap;
   justify-content: stretch;
 }
-/*.fb_interactive {
-  display: block;
-  height: auto;
-  width: auto;
-  -webkit-transition: .3s ease;
-  -moz-transition: .3s ease;
-  -ms-transition: .3s ease;
-  -o-transition: .3s ease;
-  transition: .3s ease;
-}
-.fb_interactive:hover {
-  background-color: #0F96DC;
-}*/
 .fb_interactive {
   position: relative;
   padding: 1%;
@@ -245,6 +233,7 @@ p {
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
 }
 .fb_interactive:after {
   bottom: 0;
@@ -280,10 +269,18 @@ p {
   margin-bottom: 3%;
   border-top: #0F96DC solid 12px;
   border-bottom: #0F96DC solid 12px;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;  
+}
+.next_race_bar:hover ul::after {
+  width: 80%;
 }
 .left_race_bar {
   height: auto;
-  width: 25%;
+  width: 22.5%;
   font-size: 32pt;
   color: #ffffff;
   font-family: 'roboto_condensedbold';
@@ -301,13 +298,35 @@ p {
 .center_race_bar {
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 55%;
+}
+.next_race_bar ul {
+  display: flex;
   justify-content: space-between;
   height: auto;
-  width: 50%;
+  width: 100%;
+  position: relative;
+  border-bottom: transparent solid 4px;
+}
+.next_race_bar ul::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 10%;
+  width: 0%;
+  border-bottom: solid 10px #ffffff;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
 }
 .center_race_bar span {
+  height: 100%;
   font-family: 'robotoblack_italic';
-  font-size: 102pt;
+  font-size: 114pt;
   color: #ffffff;
 }
 #center_race_month {
@@ -323,7 +342,7 @@ p {
 }
 .right_race_bar {
   height: auto;
-  width: 25%;
+  width: 22.5%;
   opacity: .1;
 }
 .race_bar_pic {
@@ -378,3 +397,194 @@ p {
 .loaded_logo {
   position: absolute;
 }
+.footer {
+  height: 36vh;
+  width: 100vw;
+  background: #004382;
+  margin-top: 5%;
+}
+.footer_content_container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.left_footer {
+  display: flex;
+  height: 100%;
+  width: 30%;
+}
+.center_footer {
+  display: flex;
+  height: 100%;
+  width: 60%;
+}
+.right_footer {
+  content: "";
+  height: 100%;
+  width: 30%;
+  background: rgb(0,41,80);
+  background: linear-gradient(100deg, rgba(0,41,80,0) 35%, rgba(15,150,220,1) 35%, rgba(15,150,220,1) 50%, rgba(15,150,220,1) 65%, rgba(12,130,194,0) 65%); 
+}
+@media only screen and (max-width: 1760px) {
+  .container {
+    margin-left: 15%;
+    margin-right: 15%;
+} .center_race_bar span {
+    font-size: 104pt;
+}}
+@media only screen and (max-width: 1600px) {
+  .container {
+    margin-left: 14%;
+    margin-right: 14%;
+} .center_race_bar span {
+    font-size: 94pt;
+}}
+@media only screen and (max-width: 1472px) {
+  .container {
+    margin-left: 13%;
+    margin-right: 13%;
+} .center_race_bar span {
+    font-size: 88pt;
+}}
+@media only screen and (max-width: 1376px) {
+  .container {
+    margin-left: 12%;
+    margin-right: 12%;
+} .center_race_bar span {
+    font-size: 82pt;
+}}
+@media only screen and (max-width: 1280px) {
+  .container {
+    margin-left: 11%;
+    margin-right: 11%;
+} .center_race_bar span {
+    font-size: 76pt;  
+} .next_race_bar ul::after {
+    border-bottom: solid 4px #ffffff;
+}}
+@media only screen and (max-width: 1216px) {
+  .container {
+    margin-left: 10%;
+    margin-right: 10%;
+} .latest_news span {
+    font-size: 28pt;
+} .left_race_bar span {
+    font-size: 26pt;
+} .center_race_bar span {
+    font-size: 72pt;  
+} .next_race_bar ul::after {
+    border-bottom: solid 4px #ffffff;
+} .partners_text {
+    font-size: 28pt;
+}}
+@media only screen and (max-width: 1120px) {
+  .container {
+    margin-left: 9%;
+    margin-right: 9%;
+} .center_race_bar span {
+    font-size: 66pt;  
+} .next_race_bar ul::after {
+    border-bottom: solid 4px #ffffff;
+}}
+@media only screen and (max-width: 1056px) {
+  .container {
+    margin-left: 8%;
+    margin-right: 8%;
+} .center_race_bar span {
+    font-size: 62pt;  
+} .next_race_bar ul::after {
+    border-bottom: solid 4px #ffffff;
+}}
+@media only screen and (max-width: 1024px) {
+  .container {
+    margin-left: 7%;
+    margin-right: 7%;
+} #main_menu_right {
+    font-size: 16pt;
+} #mm_racing {
+  font-size: 18pt;
+} .latest_news span {
+  font-size: 20pt;
+} .left_race_bar span {
+  font-size: 22pt;
+} .center_race_bar span {
+    font-size: 61pt;  
+} .next_race_bar ul::after {
+    border-bottom: solid 4px #ffffff;
+} .partners_text {
+  font-size: 20pt;
+}}
+@media only screen and (max-width: 960px) {
+  .container {
+    margin-left: 6%;
+    margin-right: 6%;
+} .center_race_bar span {
+    font-size: 57pt;  
+} .next_race_bar ul::after {
+    border-bottom: solid 4px #ffffff;
+}}
+@media only screen and (max-width: 928px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+} .center_race_bar span {
+    font-size: 55pt;  
+} .next_race_bar ul::after {
+    border-bottom: solid 4px #ffffff;
+}}
+@media only screen and (max-width: 864px) {
+  .container {
+    margin-left: 4%;
+    margin-right: 4%;
+} .center_race_bar span {
+    font-size: 52pt;  
+} .next_race_bar ul::after {
+    border-bottom: solid 4px #ffffff;
+} .partners_container {
+  flex-wrap: wrap;
+} .partner_item {
+  flex-wrap: wrap;
+}}
+@media only screen and (max-width: 832px) {
+  .container {
+    margin-left: 3%;
+    margin-right: 3%;
+} #main_menu_right {
+    font-size: 12pt;
+} #mm_racing {
+  font-size: 14pt;
+} .center_race_bar span {
+    font-size: 50pt;  
+} .next_race_bar ul::after {
+    border-bottom: solid 4px #ffffff;
+}}
+@media only screen and (max-width: 800px) {
+  .container {
+    margin-left: 2%;
+    margin-right: 2%;
+} .center_race_bar span {
+    font-size: 48pt;  
+} .next_race_bar ul::after {
+    border-bottom: solid 4px #ffffff;
+}}
+@media only screen and (max-width: 768px) {
+  .container {
+    margin-left: 1%;
+    margin-right: 1%;
+} .center_race_bar span {
+    font-size: 46pt;  
+} .next_race_bar ul::after {
+    border-bottom: solid 4px #ffffff;
+}}
+@media only screen and (max-width: 736px) {
+  .center_race_bar span {
+    font-size: 44pt;  
+} .next_race_bar ul::after {
+    border-bottom: solid 4px #ffffff;
+}}
+@media only screen and (max-width: 704px) {
+  .center_race_bar span {
+    font-size: 42pt;  
+} .next_race_bar ul::after {
+    border-bottom: solid 4px #ffffff;
+}}
