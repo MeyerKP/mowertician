@@ -4,7 +4,6 @@ body {
   font-size: 14pt;
   color: #000000;
   margin: 0;
-  overflow-y: scroll;
   overflow-x: hidden;
 }
 a {
@@ -202,6 +201,7 @@ p {
   height: auto;
   margin-top: 3%;
   margin-bottom: 3%;
+  overflow: hidden;
 }
 .latest_news {
   font-family: 'roboto_condensedbold';
@@ -215,18 +215,151 @@ p {
 #l_news {
   color: #0F96DC;
 }
-.fb_post_container {
+.fb_slideshow_centered {
+  height: auto;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: stretch;
+  justify-content: center;
 }
-.fb_interactive {
+.fb_slide_container {
   position: relative;
-  padding: 1%;
-  border: solid 5px transparent;
+  display: flex;
+  height: auto;
+  width: 1000px;
+  border: solid 1px #000000;
+  overflow: hidden;
 }
-.fb_interactive:before, .fb_interactive:after {
+#fb_slide_1 {
+  content: "";
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+#fb_slide_2 {
+  content: "";
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+#fb_slide_3 {
+  content: "";
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+#fb_slide_4 {
+  content: "";
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+.fb_slider_buttons {
+  position: absolute;
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  font-family: 'robotoblack', sans-serif;
+  z-index: 1;  
+}
+.fb_slider_buttons span {
+  font-size: 16pt;
+  color: #ffffff;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin: 1%;
+  border: #000000 solid 1px;
+  cursor: pointer;
+}
+#fb_button_1 {
+  height: auto;
+  width: auto;
+  background: #004382;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+#fb_button_2 {
+  height: auto;
+  width: auto;
+  background: #004382;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+#fb_button_3 {
+  height: auto;
+  width: auto;
+  background: #000000;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+#fb_button_4 {
+  height: auto;
+  width: auto;
+  background: #000000;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+.fb_slider_condense_buttons {
+  position: absolute;
+  bottom: 5%;
+  display: none;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  font-family: 'robotoblack', sans-serif;
+  z-index: 1;  
+}
+.fb_slider_condense_buttons span {
+  font-size: 16pt;
+  color: #ffffff;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin: 1%;
+  border: #000000 solid 1px;
+  cursor: pointer;
+}
+#fb_condense_button_1 {
+  height: auto;
+  width: auto;
+  background: #004382;
+}
+#fb_condense_button_2 {
+  height: auto;
+  width: auto;
+  background: #000000;
+}
+#fb_condense_button_3 {
+  height: auto;
+  width: auto;
+  background: #000000;
+}
+#fb_condense_button_4 {
+  height: auto;
+  width: auto;
+  background: #000000;
+}
+/*.fb_interactive:before, .fb_interactive:after {
   content: "";
   position: absolute;
   transition: 0.3s ease-in-out;
@@ -259,6 +392,7 @@ p {
   height: 45%;
   width: 45%;
 }
+*/
 .next_race_bar {
   display: flex;
   height: 36vh;
@@ -398,9 +532,9 @@ p {
   position: absolute;
 }
 .footer {
-  height: 36vh;
+  height: 46vh;
   width: 100vw;
-  background: #004382;
+  background: #000000;
   margin-top: 5%;
 }
 .footer_content_container {
@@ -410,20 +544,68 @@ p {
 }
 .left_footer {
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 30%;
+  background: rgb(0,67,130);
+  background: linear-gradient(69deg, rgba(0,67,130,1) 25%, rgba(12,130,194,1) 25%, rgba(12,130,194,1) 35%, rgba(255,126,0,1) 35%, rgba(255,126,0,1) 37%, rgba(255,126,0,0) 37%);
 }
 .center_footer {
   display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  font-size: 10pt;
   height: 100%;
   width: 60%;
 }
-.right_footer {
+.center_footer ul {
+  margin: 0;
+  padding-left: 10%;
+}
+#footer_menu li {
+  display: block;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+#footer_menu a {
+  color: #ffffff;
+  position: relative;
+}
+#footer_menu a:after {
   content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: #0F96DC 3px solid;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+}
+#footer_menu a:hover::after {
+  width: 100%;
+}
+#footer_menu a:hover {
+  color: #0F96DC;
+}
+#footer_racing {
+  display: inline;
+  color: #0F96DC;
+  font-family: 'seagram_tfbregular';
+  font-size: 18pt;
+}
+.right_footer {
+  display: flex;
+  align-items: center;
   height: 100%;
-  width: 30%;
-  background: rgb(0,41,80);
-  background: linear-gradient(100deg, rgba(0,41,80,0) 35%, rgba(15,150,220,1) 35%, rgba(15,150,220,1) 50%, rgba(15,150,220,1) 65%, rgba(12,130,194,0) 65%); 
+  width: 30%; 
+}
+.footer_logo {
+  height: 253.5px;
+  width: 300px;
 }
 @media only screen and (max-width: 1760px) {
   .container {
@@ -476,6 +658,9 @@ p {
     border-bottom: solid 4px #ffffff;
 } .partners_text {
     font-size: 28pt;
+} .footer_logo {
+  height: 169px;
+  width: 200px;
 }}
 @media only screen and (max-width: 1120px) {
   .container {
@@ -557,6 +742,9 @@ p {
     font-size: 50pt;  
 } .next_race_bar ul::after {
     border-bottom: solid 4px #ffffff;
+} .footer_logo {
+  height: 135.2px;
+  width: 160px;
 }}
 @media only screen and (max-width: 800px) {
   .container {
@@ -587,4 +775,7 @@ p {
     font-size: 42pt;  
 } .next_race_bar ul::after {
     border-bottom: solid 4px #ffffff;
+} .footer_logo {
+  height: 84.5px;
+  width: 100px;
 }}

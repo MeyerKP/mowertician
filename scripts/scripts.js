@@ -24,13 +24,13 @@ document.getElementById("main_menu_ex").onclick = closemainMenu;
     
 function openmainMenu() {
   document.getElementById("main_menu").style.left = '0%';
-  document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+  document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
   document.getElementById("navbar").style.position = 'sticky';
   document.getElementById("home_page_main_photo").style.marginTop = "0";
 }
 function closemainMenu() {
   document.getElementById("main_menu").style.left = '-100%';
-  document.getElementsByTagName('body')[0].style.overflow = 'scroll';
+  document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
   document.getElementById("navbar").style.position = 'fixed';
   document.getElementById("home_page_main_photo").style.marginTop = "81px";
 }
