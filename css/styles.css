@@ -378,17 +378,19 @@ p {
 .fb_slider_condense_buttons {
   position: absolute;
   bottom: 5%;
-  left: 43%;
+  left: 38%;
   display: flex;
   justify-content: space-between;
   height: 5%;
-  width: 14%;
+  width: 24%;
   font-family: 'robotoblack', sans-serif;
   z-index: 0.9;  
 }
 .fb_slider_condense_buttons span {
-  height: 24px;
-  width: 24px;
+  height: 22px;
+  width: 18px;
+  margin-left: 2px;
+  margin-right: 2px;
   border: solid 2px #808080;
   border-radius: 6px;
   cursor: pointer;
@@ -618,6 +620,7 @@ p {
   background: linear-gradient(69deg, rgba(0,67,130,1) 25%, rgba(12,130,194,1) 25%, rgba(12,130,194,1) 35%, rgba(255,126,0,1) 35%, rgba(255,126,0,1) 37%, rgba(255,126,0,0) 37%);
 }
 .center_footer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -627,8 +630,9 @@ p {
   width: 60%;
 }
 .center_footer ul {
-  margin: 0;
+  margin-bottom: 2%;
   padding-left: 10%;
+  justify-self: center;
 }
 #footer_menu li {
   display: block;
@@ -661,11 +665,68 @@ p {
   display: inline;
   color: #0F96DC;
   font-family: 'seagram_tfbregular';
-  font-size: 18pt;
+  font-size: 12pt;
+}
+.footer_truefooter {
+  position: absolute;
+  bottom: 0;
+  height: 20%;
+  width: 100%;
+  display: flex;
+  border-top: #4a4a4a solid 1px;
+  font-size: 10pt;
+  color: #4a4a4a;
+}
+.footer_truefooter span {
+  display: inline-block;
+  font-size: 10pt;
+}
+.footer_truefooter i {
+  color: #4a4a4a;
+}
+#left_true_footer {
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+  height: 100%;
+  width: 15%;
+}
+#mowertician_icon32 {
+  height: auto;
+}
+#right_true_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  flex-grow: 1;
+}
+#right_true_footer p {
+  margin: 0;
+  padding: 0;
+}
+#right_true_footer i {
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+#right_true_footer i:hover {
+  color: #0F96DC;
+}
+#tf_mower {
+  color: #ff7E00;
+  font-family: 'seagram_tfbregular';
+}
+#tf_racing {
+  color: #0F96DC;
+  font-family: 'seagram_tfbregular';
 }
 .right_footer {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
   width: 30%; 
 }
@@ -715,6 +776,12 @@ p {
 } .fb_slide_condense_container {
     position: relative;
     left: auto;
+} .center_footer ul {
+    font-size: 8pt;
+} #footer_racing {
+    font-size: 10pt;
+} .footer_truefooter span,p {
+    font-size: 8pt;
 }}
 @media only screen and (max-width: 1216px) {
   .container {
@@ -770,6 +837,12 @@ p {
     border-bottom: solid 4px #ffffff;
 } .partners_text {
   font-size: 20pt;
+} .center_footer ul {
+    font-size: 6pt;
+} #footer_racing {
+    font-size: 8pt;
+} .footer_truefooter span,p {
+    font-size: 6pt;
 }}
 @media only screen and (max-width: 960px) {
   .container {
@@ -835,6 +908,12 @@ p {
     font-size: 46pt;  
 } .next_race_bar ul::after {
     border-bottom: solid 4px #ffffff;
+} .center_footer ul {
+    font-size: 4pt;
+} #footer_racing {
+    font-size: 6pt;
+} .footer_truefooter span,p {
+    font-size: 4pt;
 }}
 @media only screen and (max-width: 736px) {
   .center_race_bar span {
