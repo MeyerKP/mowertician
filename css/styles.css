@@ -24,7 +24,7 @@ p {
   display: flex;
 }
 #navbar {
-  height: 80px;
+  height: 9vh;
   width: 100%;
   position: fixed;
   top: 0;
@@ -38,7 +38,7 @@ p {
   align-items: center;
 }
 #rightnav {
-  height: 80px;
+  height: 9vh;
   width: auto;
   display: flex;
   align-items: center;
@@ -97,7 +97,7 @@ p {
   color: #0F96DC;
 }
 #home_page_main_photo {
-  margin-top: 81px;
+  margin-top: 9vh;
   height: auto;
   width: 100%;
 }
@@ -107,7 +107,7 @@ p {
   position: fixed;
   height: 100%;
   width: 100%;
-  top: 81px;
+  top: 9vh;
   left: -100%;
   border-right: #000000 1px solid;
   overflow: hidden;
@@ -780,7 +780,7 @@ p {
     font-size: 8pt;
 } #footer_racing {
     font-size: 10pt;
-} .footer_truefooter span,p {
+} .footer_truefooter span, .footer_truefooter p {
     font-size: 8pt;
 }}
 @media only screen and (max-width: 1216px) {
@@ -829,6 +829,8 @@ p {
   font-size: 18pt;
 } .latest_news span {
   font-size: 20pt;
+} .next_race_bar {
+  height: 24vh;
 } .left_race_bar span {
   font-size: 22pt;
 } .center_race_bar span {
@@ -836,12 +838,14 @@ p {
 } .next_race_bar ul::after {
     border-bottom: solid 4px #ffffff;
 } .partners_text {
-  font-size: 20pt;
+    font-size: 20pt;
+} .footer {
+    height: 36vh;
 } .center_footer ul {
-    font-size: 6pt;
+    font-size: 8pt;
 } #footer_racing {
     font-size: 8pt;
-} .footer_truefooter span,p {
+} .footer_truefooter span, .footer_truefooter p {
     font-size: 6pt;
 }}
 @media only screen and (max-width: 960px) {
@@ -912,8 +916,13 @@ p {
     font-size: 4pt;
 } #footer_racing {
     font-size: 6pt;
-} .footer_truefooter span,p {
+} .footer_truefooter span, .footer_truefooter p {
     font-size: 4pt;
+} #mowertician_icon32 {
+    height: 16px;
+    width: 16px;
+} #home_page_main_photo {
+    margin-top: 22vh;
 }}
 @media only screen and (max-width: 736px) {
   .center_race_bar span {
@@ -927,6 +936,35 @@ p {
 } .next_race_bar ul::after {
     border-bottom: solid 4px #ffffff;
 } .footer_logo {
-  height: 84.5px;
-  width: 100px;
+    height: 84.5px;
+    width: 100px;
+} #mowertician_icon32 {
+    height: 16px;
+    width: 16px;
+}}
+@media only screen and (max-width: 576px) {
+  .footer_truefooter span, .footer_truefooter p {
+    font-size: 3pt;
+}}
+@media handheld, screen and (max-width: 1200px) {
+  #navmowertician p, span {
+    font-size: 56pt;
+} .next_race_bar {
+    height: 16vh;
+} .footer {
+    height: 24vh;
+}}
+@media handheld, screen and (max-width: 1200px) and (orientation: landscape) {
+  #navbar {
+    height: 22vh;
+} #leftnav, #rightnav {
+    height: 22vh;
+} #navmowertician p, span {
+    font-size: 46pt;
+} #home_page_main_photo {
+    margin-top: 22vh;
+} .next_race_bar {
+    height: 28vh;
+} .footer {
+    height: 40vh;
 }}
