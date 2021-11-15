@@ -52,7 +52,7 @@ p {
   position: relative;
   font-family: 'seagram_tfbregular';
 }
-#navmowertician:before {
+#navmowertician::before {
   content: "";
   display: block;
   height: 100%;
@@ -63,7 +63,7 @@ p {
   transition: 0.2s linear;
   -webkit-transition: 0.2s linear;
 }
-#navmowertician:hover:before {
+#navmowertician:hover::before {
   opacity: .4;
 }
 #navmowertician p,span {
@@ -172,7 +172,7 @@ p {
   position: relative;
   transition: color 0.4s;
 }
-#main_menu_menu a:after {
+#main_menu_menu a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -643,7 +643,7 @@ p {
   color: #ffffff;
   position: relative;
 }
-#footer_menu a:after {
+#footer_menu a::after {
   content: "";
   position: absolute;
   bottom: 0;
