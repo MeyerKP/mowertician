@@ -23,6 +23,10 @@ p {
   margin-right: 16%;
   display: flex;
 }
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+}
 #navbar {
   height: 9vh;
   width: 100%;
@@ -43,7 +47,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: right;
-  flex: 1;
 }
 #navmowertician {
   height: auto;
@@ -76,9 +79,16 @@ p {
 #nav_racing {
   color: #0F96DC;
 }
+#navbar_list {
+  display: flex;
+  flex-direction: row;
+  margin-right: 50%;
+}
 #navbar_list li {
   display: inline;
   font-size: 22pt;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 #navbar_list a {
   transition: 0.3s linear;
@@ -950,9 +960,9 @@ p {
   #navmowertician p, span {
     font-size: 56pt;
 } .next_race_bar {
-    height: 16vh;
+    height: 14vh;
 } .footer {
-    height: 24vh;
+    height: 20vh;
 } .latest_news {
     border-image: "";
 }}
