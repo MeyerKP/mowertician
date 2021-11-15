@@ -953,6 +953,8 @@ p {
     height: 16vh;
 } .footer {
     height: 24vh;
+} .latest_news {
+    border-image: "";
 }}
 @media handheld, screen and (max-width: 1200px) and (orientation: landscape) {
   #navbar {
@@ -967,4 +969,6 @@ p {
     height: 28vh;
 } .footer {
     height: 40vh;
+} .latest_news {
+    border-image: "";
 }}
