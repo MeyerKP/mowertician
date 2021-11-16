@@ -227,7 +227,7 @@ p {
   overflow: hidden;
   transition: all 0.8s ease;
   z-index: 1;
-  background-image: url(/img/menu_background.png);
+  background-image: url("/img/menu_background.png");
 }
 #mobile_menu_left {
   width: 33%;
