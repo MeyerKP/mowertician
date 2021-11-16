@@ -128,7 +128,6 @@ p {
   position: fixed;
   height: 100%;
   width: 100%;
-  top: 9vh;
   left: -100%;
   border-right: #000000 1px solid;
   overflow: hidden;
@@ -221,16 +220,14 @@ p {
   display: flex;
   background: #ffffff;
   position: fixed;
-  height: 91vh;
+  height: 100%;
   width: 100%;
-  top: 9vh;
   left: -100%;
   border-right: #000000 1px solid;
   overflow: hidden;
   transition: all 0.8s ease;
   z-index: 1;
-  background: rgb(2,0,36);
-  background: linear-gradient(297deg, rgba(2,0,36,1) 0%, rgba(0,67,130,1) 35%, rgba(15,150,220,1) 100%); 
+  background-image: url(/img/menu_background.png);
 }
 #mobile_menu_left {
   width: 33%;
@@ -1073,7 +1070,7 @@ p {
     position: absolute;
     left: -10000px;
 } #home_page_main_photo {
-    margin-top: 0;
+    margin-top: 22vh;
 } .next_race_bar {
     height: 12vh;
 } .footer {
@@ -1092,10 +1089,8 @@ p {
 } #mobile_menubutton {
     position: static;
     left: 0;
-} #mobile_menu {
-    top: 22vh;
 } #home_page_main_photo {
-    margin-top: 0;
+    margin-top: 22vh;
 } .next_race_bar {
     height: 36vh;
 } .footer {
