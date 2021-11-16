@@ -1,5 +1,6 @@
-if(window.pageYoffset==0){
-  document.getElementById("navbar").style.top = "0";
+var atTopofPage = window.pageYOffset;
+  if(atTopofPage===0){
+    document.getElementById("navbar").style.top = "0";
 }
 
 var prevScrollpos = window.pageYOffset;
