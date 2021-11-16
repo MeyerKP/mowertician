@@ -106,6 +106,17 @@ p {
 #navmenu:hover {
   color: #0F96DC;
 }
+#mobile_menubutton {
+  display: block;
+  font-size: 40pt;
+  cursor: pointer;
+  transition: 0.3s linear;
+  position: absolute;
+  left: -10000px;
+}
+#mobile_menubutton:hover {
+  color: #0F96DC;
+}
 #home_page_main_photo {
   margin-top: 9vh;
   height: auto;
@@ -121,7 +132,7 @@ p {
   left: -100%;
   border-right: #000000 1px solid;
   overflow: hidden;
-  transition: all 1.2s ease;
+  transition: all 0.8s ease;
   z-index: 1;
 }
 #main_menu_left {
@@ -205,6 +216,97 @@ p {
   color: #0F96DC;
   font-family: 'seagram_tfbregular';
   font-size: 26pt;
+}
+#mobile_menu {
+  display: flex;
+  background: #ffffff;
+  position: fixed;
+  height: 91vh;
+  width: 100%;
+  top: 9vh;
+  left: -100%;
+  border-right: #000000 1px solid;
+  overflow: hidden;
+  transition: all 0.8s ease;
+  z-index: 1;
+}
+#mobile_menu_left {
+  width: 33%;
+}
+#mobile_menu_ex {
+  display: block;
+  color: #000000;
+  font-size: 56pt;
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  transition: color 0.3s linear;
+}
+#mobile_menu_ex:hover {
+  color: #0F96DC;
+}
+#mobile_menu_logo {
+  height: 8%;
+}
+#mobile_menu_right {
+  display: flex;
+  flex-direction: column;
+  font-size: 56pt;
+  font-family: 'robotobold', sans-serif;
+  font-weight: 600;
+  height: auto;
+  width: 66%;
+  justify-content: center;
+}
+#mobile_menu_menu ul {
+  margin: 0;
+}
+#mobile_menu_menu li {
+  display: block;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+#mobile_menu_social {
+  padding-bottom: 140px;
+}
+#mobile_menu_social li {
+  display: inline;
+  font-size: 22pt;
+}
+#mobile_menu_social a {
+  transition: color 0.3s;
+}
+#mobile_menu_social a:hover {
+  color: #0F96DC;
+}
+#mobile_menu_menu a {
+  color: #000000;
+  position: relative;
+  transition: color 0.4s;
+}
+#mobile_menu_menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: #0F96DC 3px solid;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+}
+#mobile_menu_menu a:hover::after {
+  width: 100%;
+}
+#mobile_menu_menu a:hover {
+  color: #0F96DC;
+}
+#mobile_menu_racing {
+  display: inline;
+  color: #0F96DC;
+  font-family: 'seagram_tfbregular';
+  font-size: 56pt;
 }
 .latest_news_container {
   flex-direction: column;
@@ -959,12 +1061,19 @@ p {
 @media handheld, screen and (max-width: 1200px) {
   #navmowertician p, span {
     font-size: 56pt;
+} #navmenu {
+    position: absolute;
+    left: -10000px;
+} #mobile_menubutton {
+    position: static;
+    left: 0;
+} #navbar_list {
+    position: absolute;
+    left: -10000px;
 } .next_race_bar {
-    height: 14vh;
+    height: 12vh;
 } .footer {
-    height: 20vh;
-} .latest_news {
-    border-image: "";
+    height: 18vh;
 }}
 @media handheld, screen and (max-width: 1200px) and (orientation: landscape) {
   #navbar {
@@ -973,12 +1082,18 @@ p {
     height: 22vh;
 } #navmowertician p, span {
     font-size: 46pt;
+} #navmenu {
+    position: absolute;
+    left: -10000px;
+} #mobile_menubutton {
+    position: static;
+    left: 0;
+} #mobile_menu {
+    top: 22vh;
 } #home_page_main_photo {
     margin-top: 22vh;
 } .next_race_bar {
-    height: 28vh;
+    height: 36vh;
 } .footer {
     height: 40vh;
-} .latest_news {
-    border-image: "";
 }}

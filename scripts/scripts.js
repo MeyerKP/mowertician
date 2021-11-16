@@ -8,6 +8,7 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
 document.getElementById("navmenu").onclick = function() {
   const element = document.querySelector('#main_menu');
   const style = getComputedStyle(element);
@@ -33,6 +34,32 @@ function closemainMenu() {
   document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
   document.getElementById("navbar").style.position = 'fixed';
   document.getElementById("home_page_main_photo").style.marginTop = "81px";
+}
+document.getElementById("mobile_menubutton").onclick = function() {
+  const element = document.querySelector('#mobile_menu');
+  const style = getComputedStyle(element);
+  const left = style.left;
+  if (left == "0px") {
+      closemobileMenu();
+      console.log(left);
+  } else {
+      openmobileMenu();
+      console.log(left);
+}}
+
+document.getElementById("mobile_menu_ex").onclick = closemobileMenu;
+    
+function openmobileMenu() {
+  document.getElementById("mobile_menu").style.left = '0%';
+  document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
+  document.getElementById("navbar").style.position = 'sticky';
+  document.getElementById("home_page_main_photo").style.marginTop = "0";
+}
+function closemobileMenu() {
+  document.getElementById("mobile_menu").style.left = '-100%';
+  document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
+  document.getElementById("navbar").style.position = 'fixed';
+  document.getElementById("home_page_main_photo").style.marginTop = "9vh";
 }
 
 document.getElementById("fb_button_1").onclick = fbslideRight;
