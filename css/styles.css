@@ -229,6 +229,8 @@ p {
   overflow: hidden;
   transition: all 0.8s ease;
   z-index: 1;
+  background: rgb(2,0,36);
+  background: linear-gradient(297deg, rgba(2,0,36,1) 0%, rgba(0,67,130,1) 35%, rgba(15,150,220,1) 100%); 
 }
 #mobile_menu_left {
   width: 33%;
@@ -1059,10 +1061,7 @@ p {
     font-size: 3pt;
 }}
 @media handheld, screen and (max-width: 1200px) {
-  #navbar {
-    position: fixed;
-    top: 0;
-} #navmowertician p, span {
+  #navmowertician p, span {
     font-size: 56pt;
 } #navmenu {
     position: absolute;
