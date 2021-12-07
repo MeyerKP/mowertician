@@ -1057,7 +1057,7 @@ p {
   .footer_truefooter span, .footer_truefooter p {
     font-size: 3pt;
 }}
-@media handheld, screen and (max-width: 1200px) {
+@media (hover: none) {
   #navmowertician p, span {
     font-size: 56pt;
 } #navmenu {
@@ -1070,13 +1070,13 @@ p {
     position: absolute;
     left: -10000px;
 } #home_page_main_photo {
-    margin-top: 0vh;
+    margin-top: 9vh;
 } .next_race_bar {
     height: 12vh;
 } .footer {
     height: 18vh;
 }}
-@media handheld, screen and (max-width: 1200px) and (orientation: landscape) {
+@media (hover: none) and (orientation: landscape) {
   #navbar {
     height: 22vh;
 } #leftnav, #rightnav {
