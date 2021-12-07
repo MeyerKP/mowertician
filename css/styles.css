@@ -225,7 +225,7 @@ p {
   left: -100%;
   border-right: #000000 1px solid;
   overflow: hidden;
-  transition: all 0.4s linear;
+  transition: all 0.3s ease;
   z-index: 1;
   background-image: url("https://meyerkp.github.io/mowertician/img/menu_background.png");
 }
@@ -271,6 +271,7 @@ p {
 }
 #mobile_menu_social {
   padding-bottom: 140px;
+  color: #ffffff;
 }
 #mobile_menu_social li {
   display: inline;
