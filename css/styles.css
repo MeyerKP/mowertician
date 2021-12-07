@@ -234,7 +234,7 @@ p {
 }
 #mobile_menu_ex {
   display: block;
-  color: #000000;
+  color: #ffffff;
   font-size: 56pt;
   position: absolute;
   top: 20px;
@@ -246,6 +246,9 @@ p {
 }
 #mobile_menu_logo {
   height: 8%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 #mobile_menu_right {
   display: flex;
@@ -271,6 +274,7 @@ p {
 #mobile_menu_social li {
   display: inline;
   font-size: 48pt;
+  color: #ffffff;
 }
 #mobile_menu_social a {
   transition: color 0.3s;
