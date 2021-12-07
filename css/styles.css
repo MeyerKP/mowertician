@@ -234,7 +234,7 @@ p {
 }
 #mobile_menu_ex {
   display: block;
-  color: #ffffff;
+  color: #0F96DC;
   font-size: 56pt;
   position: absolute;
   top: 20px;
@@ -271,14 +271,14 @@ p {
 }
 #mobile_menu_social {
   padding-bottom: 140px;
-  color: #ffffff;
+;
 }
 #mobile_menu_social li {
   display: inline;
 }
 #mobile_menu_social a {
   transition: color 0.3s;
-  color: #ffffff;
+  color: #0F96DC;
   font-size: 48pt;
 }
 #mobile_menu_social a:hover {
