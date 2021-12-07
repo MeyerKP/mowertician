@@ -275,10 +275,11 @@ p {
 }
 #mobile_menu_social li {
   display: inline;
-  font-size: 48pt;
 }
 #mobile_menu_social a {
   transition: color 0.3s;
+  color: #ffffff;
+  font-size: 48pt;
 }
 #mobile_menu_social a:hover {
   color: #0F96DC;
@@ -1076,8 +1077,8 @@ p {
     left: -10000px;
 } #home_page_main_photo {
     margin-top: 9vh;
-} .latest_news {
-    font-size: 78pt;
+} .latest_news span {
+    font-size: 40pt;
 } .next_race_bar {
     height: 12vh;
 } .footer {
